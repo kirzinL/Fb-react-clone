@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+
+
+
+import { useState } from 'react';
+import LoginApp from './login';
+import RecentProfile from './recentprofile';
 
 function App() {
+
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='appContainer'>
+      <div className='recent-container'>
+        <h1 className='fb'>facebook</h1>
+        <h2>Recent Logins</h2>
+        <span>Click your picture or add an account.</span>
+
+        <RecentProfile/>
+        </div>
+       <div className='login-container'>
+        <LoginApp />
+        
+        <span className='foot'>Create a Page for a celebrity, brand or business.</span>
+       </div>
+
+      {/* <RecentProfile />
+      <LoginApp /> */}
     </div>
+   
   );
 }
+
 
 export default App;
